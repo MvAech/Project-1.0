@@ -1,0 +1,14 @@
+{
+  "name": "project-1_0",
+  "version": "1.0.0",
+  "description": "An ASP.NET Core project with Node.js tooling",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec dotnet run"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

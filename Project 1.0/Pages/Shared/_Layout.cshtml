@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character set and viewport settings for responsiveness -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Dynamic title using ViewData, appending 'Project 1.0' for branding -->
+    <title>@ViewData["Title"] - Project 1.0</title>
+
+    <!-- Link to Bootstrap CSS for styling and responsive behavior -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Main site styles -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <!-- Additional project-specific styles -->
+    <link rel="stylesheet" href="~/Project_1._0.styles.css" asp-append-version="true" />
+
+    <!--Graphical Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header section containing the navigation bar -->
+    <header>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-purple border-bottom box-shadow mb-3">
+            <div class="container">
+                <!-- Site logo or name, linked to the Home/Index page -->
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img src="~/images/mviouslogo.png" alt="Mvious Logo" style="height: 40px;">
+                </a>
+
+
+                <!-- Mobile responsive toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation links -->
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Index"><i class="bi bi-house-fill"></i> Home</a>
+                        </li>
+                        <!-- Dropdown Menu for Navigation -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-globe"></i> Navigation
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" asp-area="" asp-page="/Privacy">Privacy</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-page="/Updates">Updates</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content area where individual views are rendered -->
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer with copyright and privacy link -->
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Project 1.0 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <!-- Scripts necessary for Bootstrap functionality -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for the site -->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- Optional section for additional scripts in specific views -->
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

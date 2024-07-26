@@ -1,0 +1,13 @@
+﻿@page
+@model Project_1._0.Pages.updatesModel // Ensure correct model reference
+@{
+    ViewData["Title"] = "Updates";
+}
+
+<h2>Recent Updates</h2>
+<ul>
+    @foreach (var update in Model.RecentUpdates)
+    {
+        <li>@update.Date.ToString("yyyy-MM-dd"): @update.Description</li>
+    }
+</ul>

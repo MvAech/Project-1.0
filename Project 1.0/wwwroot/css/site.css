@@ -1,0 +1,107 @@
+/* Existing styles... */
+
+
+/* Global body styles */
+body {
+    margin: 20px;
+    font-family: 'Copperplate Gothic', 'Copperplate', Gothic, sans-serif;
+    background-color: #000;
+    color: #cccccc;
+    font-weight: bold;
+}
+
+
+/* Global HTML settings */
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Global AppBar styles */
+.navbar {
+    background-color: #570ebf;
+    font-family: 'Copperplate Gothic', 'Copperplate', Gothic, sans-serif;
+    color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-weight: bold; /* Makes text bold */
+}
+
+.nav-link, .navbar-brand {
+    color: gray; /* Ensuring all navigation links are white */
+}
+
+.navbar .nav-link:hover, .navbar .navbar-brand:hover {
+    color: #cccccc; /* Lighter grey on hover for visual effect */
+}
+
+.navbar-brand img {
+    height: 40px; /* Controls the size of the logo */
+    vertical-align: middle; /* Aligns the logo vertically in the middle of the navbar */
+    margin-right: 10px; /* Optional: adds spacing on the right of the logo */
+}
+
+
+/* Focus styles for various elements */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem gray, 0 0 0 0.25rem #258cfb;
+}
+
+/* Header styles */
+h1 {
+    color: #6a5acd;
+}
+
+h2 {
+    color: #6a5acd;
+}
+
+h3 {
+    color: #3b00a9;
+}
+
+
+/* Paragraph text styles */
+p {
+    font-size: 16px;
+    color: #cccccc;
+}
+
+/* Enhanced typography and readability for text-center class */
+.text-center p {
+    font-size: 1.1rem; /* Slightly larger text for better readability */
+    line-height: 1.6; /* Increased line height for better text flow */
+    color: #cccccc; /* Darker text for better contrast */
+}
+
+.text-center a {
+    color: #0066cc; /* Brighter color for links */
+    text-decoration: none; /* No underline by default */
+}
+
+    .text-center a:hover {
+        text-decoration: underline; /* Underline on hover for links */
+    }
+
+/* Dropdown menu styles */
+.navbar .dropdown-menu {
+    background-color: #6a5acd; /* Matching the navbar background */
+    border: none; /* No border for a cleaner look */
+}
+
+.navbar .dropdown-item {
+    color: #ffffff; /* White text for dropdown items */
+    font-weight: normal; /* Normal weight for dropdown text */
+}
+
+    .navbar .dropdown-item:hover, .navbar .dropdown-item:focus {
+        background-color: #5a4aad; /* Slightly darker on hover/focus */
+        color: #ffffff; /* Maintain white text on hover/focus */
+    }
