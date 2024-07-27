@@ -1,9 +1,11 @@
 // imports all styles
 
-@import 'base';
-@import 'layout';
-@import 'components';
-@import 'pages';
-@import 'utilities';
-@import 'themes';
+@import 'base/reset';
+@import 'layouts/grid';
+@import 'layouts/home';
+@import 'components/buttons';
+@import 'components/container';
+@import 'pages/home';
+@import 'utilities/helpers';
+@import 'themes/theme';
 @import 'mixins';
