@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\projects\\web dev\\Project 1.0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A97070F4-B54A-4C33-97C9-227D548E89E2}|Project 1.0\\Project 1.0.csproj|d:\\projects\\web dev\\project 1.0\\project 1.0\\wwwroot\\scss\\site.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
-      "RelativeMoniker": "D:0:0:{A97070F4-B54A-4C33-97C9-227D548E89E2}|Project 1.0\\Project 1.0.csproj|solutionrelative:project 1.0\\wwwroot\\scss\\site.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A97070F4-B54A-4C33-97C9-227D548E89E2}|Project 1.0\\Project 1.0.csproj|d:\\projects\\web dev\\project 1.0\\project 1.0\\wwwroot\\scss\\components\\_container.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
-      "RelativeMoniker": "D:0:0:{A97070F4-B54A-4C33-97C9-227D548E89E2}|Project 1.0\\Project 1.0.csproj|solutionrelative:project 1.0\\wwwroot\\scss\\components\\_container.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A97070F4-B54A-4C33-97C9-227D548E89E2}|Project 1.0\\Project 1.0.csproj|d:\\projects\\web dev\\project 1.0\\project 1.0\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A97070F4-B54A-4C33-97C9-227D548E89E2}|Project 1.0\\Project 1.0.csproj|solutionrelative:project 1.0\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A97070F4-B54A-4C33-97C9-227D548E89E2}|Project 1.0\\Project 1.0.csproj|d:\\projects\\web dev\\project 1.0\\project 1.0\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A97070F4-B54A-4C33-97C9-227D548E89E2}|Project 1.0\\Project 1.0.csproj|solutionrelative:project 1.0\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A97070F4-B54A-4C33-97C9-227D548E89E2}|Project 1.0\\Project 1.0.csproj|d:\\projects\\web dev\\project 1.0\\project 1.0\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A97070F4-B54A-4C33-97C9-227D548E89E2}|Project 1.0\\Project 1.0.csproj|solutionrelative:project 1.0\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A97070F4-B54A-4C33-97C9-227D548E89E2}|Project 1.0\\Project 1.0.csproj|d:\\projects\\web dev\\project 1.0\\project 1.0\\pages\\reviews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A97070F4-B54A-4C33-97C9-227D548E89E2}|Project 1.0\\Project 1.0.csproj|solutionrelative:project 1.0\\pages\\reviews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,52 +34,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\projects\\web dev\\Project 1.0\\Project 1.0\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "Project 1.0\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\projects\\web dev\\Project 1.0\\Project 1.0\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "Project 1.0\\wwwroot\\css\\site.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-07-27T02:56:11.406Z",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\projects\\web dev\\Project 1.0\\Project 1.0\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Project 1.0\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\projects\\web dev\\Project 1.0\\Project 1.0\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Project 1.0\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-27T04:51:08.308Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "site.scss",
-              "DocumentMoniker": "D:\\projects\\web dev\\Project 1.0\\Project 1.0\\wwwroot\\scss\\site.scss",
-              "RelativeDocumentMoniker": "Project 1.0\\wwwroot\\scss\\site.scss",
-              "ToolTip": "D:\\projects\\web dev\\Project 1.0\\Project 1.0\\wwwroot\\scss\\site.scss",
-              "RelativeToolTip": "Project 1.0\\wwwroot\\scss\\site.scss",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
-              "WhenOpened": "2024-07-27T02:51:45.215Z",
+              "DocumentIndex": 2,
+              "Title": "reviews.cshtml",
+              "DocumentMoniker": "D:\\projects\\web dev\\Project 1.0\\Project 1.0\\Pages\\reviews.cshtml",
+              "RelativeDocumentMoniker": "Project 1.0\\Pages\\reviews.cshtml",
+              "ToolTip": "D:\\projects\\web dev\\Project 1.0\\Project 1.0\\Pages\\reviews.cshtml",
+              "RelativeToolTip": "Project 1.0\\Pages\\reviews.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-27T04:44:29.236Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_container.scss",
-              "DocumentMoniker": "D:\\projects\\web dev\\Project 1.0\\Project 1.0\\wwwroot\\scss\\components\\_container.scss",
-              "RelativeDocumentMoniker": "Project 1.0\\wwwroot\\scss\\components\\_container.scss",
-              "ToolTip": "D:\\projects\\web dev\\Project 1.0\\Project 1.0\\wwwroot\\scss\\components\\_container.scss",
-              "RelativeToolTip": "Project 1.0\\wwwroot\\scss\\components\\_container.scss",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
-              "WhenOpened": "2024-07-27T02:45:03.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\projects\\web dev\\Project 1.0\\Project 1.0\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Project 1.0\\Pages\\Index.cshtml",
               "ToolTip": "D:\\projects\\web dev\\Project 1.0\\Project 1.0\\Pages\\Index.cshtml",
               "RelativeToolTip": "Project 1.0\\Pages\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-27T02:35:46.108Z",
               "EditorCaption": ""
