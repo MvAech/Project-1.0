@@ -1,0 +1,213 @@
+﻿@page
+@model Project_1._0.Pages.News.IndexModel
+@using Project_1._0.Models
+@{
+    ViewData["Title"] = "News Page";
+
+    // Get today's date
+    var today = DateTime.Today;
+
+    // A helper function to get the day name and date
+    string GetDayNameAndDate(DateTime date)
+    {
+        if (date.Date == today.Date)
+        {
+            return "Today";
+        }
+        return date.ToString("ddd d"); // Format: "Fri 9"
+    }
+}
+
+<h1>Weather Updates</h1>
+
+<!-- Display current weather -->
+@if (Model.CurrentWeather != null)
+{
+        <div class="weather-container">
+            <div class="weather-summary">
+                <img src="@Model.CurrentWeather.ConditionIcon" alt="Weather Icon" />
+                <p>Temperature: @Model.CurrentWeather.TempC °C / @Model.CurrentWeather.TempF °F</p>
+                <p>Condition: @Model.CurrentWeather.ConditionText</p>
+                <p>Humidity: @Model.CurrentWeather.Humidity %</p>
+                <p>Wind: @Model.CurrentWeather.WindKph km/h (@Model.CurrentWeather.WindDir)</p>
+                <p>UV Index: @Model.CurrentWeather.UvIndex</p>
+                <p>Air Quality Index (PM2.5): @Model.CurrentWeather.Aqi</p>
+            </div>
+        </div>
+}
+else
+{
+        <p>Current weather data is currently unavailable. Please try again later.</p>
+}
+
+<!-- Display 3-day weather forecast -->
+<h2>3-Day Forecast</h2>
+
+@if (Model.WeatherForecast != null)
+{
+        <div class="forecast-container">
+        @foreach (var day in Model.WeatherForecast.ForecastDays)
+        {
+                    <div class="forecast-card">
+                        <img src="@day.ConditionIcon" alt="Weather Icon" />
+                        <div class="temp-container">
+                            <p>@day.MaxTempF°</p>
+                            <p>@day.MinTempF°</p>
+                        </div>
+                        <div class="details-container">
+                            <p>@GetDayNameAndDate(DateTime.Parse(day.Date))</p>
+                            <p>@day.ConditionText</p>
+                            <p>Rain: @day.ChanceOfRain %</p>
+                        </div>
+                    </div>
+        }
+        </div>
+}
+else
+{
+        <p>Forecast data is currently unavailable. Please try again later.</p>
+}
+
+<!-- Tabs for different sections (Summary, Hourly, More Details) -->
+<!-- Tabs for different sections (Summary, Hourly, More Details) -->
+<div class="weather-tabs">
+    <ul class="tab-list">
+        <li class="tab-item active" data-tab="summary">Summary</li>
+        <li class="tab-item" data-tab="hourly">Hourly</li>
+        <li class="tab-item" data-tab="more-details">More Details</li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="summary" class="tab-pane active">
+            <!-- Temperature line chart -->
+            <div class="summary-chart">
+                <canvas id="weatherSummaryChart"></canvas> <!-- Ensure proper placement and wrapping -->
+            
+
+            <!-- Hourly forecast display -->
+            <div class="hourly-forecast-container">
+                <div class="hourly-forecast-wrapper">
+                    <button class="scroll-btn left-btn" id="scrollLeft" disabled>←</button>
+                    <div class="hourly-forecast" id="hourlyForecast">
+                        @if (Model.WeatherForecast != null && Model.WeatherForecast.ForecastDays.Any())
+                        {
+                                <div class="hourly-items">
+                                @foreach (var hour in Model.WeatherForecast.ForecastDays.FirstOrDefault()?.Hourly.Take(6) ?? new List<HourlyForecast>())
+                                {
+                                        <div class="hourly-item">
+                                            <p>@hour.Time.ToString("h tt")</p>
+                                            <img src="@hour.ConditionIcon" alt="Weather Icon" />
+                                            <p>@hour.TempF°</p>
+                                            <p>@hour.ChanceOfRain %</p>
+                                        </div>
+                                }
+                                </div>
+                        }
+                    </div>
+                    <button class="scroll-btn right-btn" id="scrollRight">→</button>
+                </div>
+               </div>
+            </div>
+        </div>
+
+        <div id="hourly" class="tab-pane">
+            <!-- Hourly content goes here -->
+        </div>
+
+        <div id="more-details" class="tab-pane">
+            <!-- More Details content goes here -->
+        </div>
+    </div>
+</div>
+
+
+<!-- JavaScript section -->
+<script>
+// Tab switching logic
+document.querySelectorAll('.tab-item').forEach(item => {
+    item.addEventListener('click', function () {
+        document.querySelectorAll('.tab-item').forEach(tab => tab.classList.remove('active'));
+        this.classList.add('active');
+        document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+        document.getElementById(this.dataset.tab).classList.add('active');
+    });
+});
+
+// Chart.js to create temperature graph
+// JavaScript for Chart.js to create temperature graph
+var ctx = document.getElementById('weatherSummaryChart').getContext('2d');
+var weatherSummaryChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['9 PM', '11 PM', '1 AM', '3 AM', '5 AM', '7 AM', '9 AM'],
+        datasets: [{
+            label: 'Temperature (°F)',
+            data: [68, 66, 65, 64, 66, 70, 75],
+            borderColor: 'rgba(255, 159, 64, 1)',  // Changed for better contrast
+            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+            fill: true,
+            pointRadius: 5,
+            pointHoverRadius: 7,
+            pointBackgroundColor: 'rgba(255, 159, 64, 1)',
+            tension: 0.4  // Adds smoothness to the line
+        }]
+    },
+    options: {
+        scales: {
+            x: {
+                beginAtZero: true,
+                grid: {
+                    display: false  // Cleaner appearance without grid lines
+                }
+            },
+            y: {
+                beginAtZero: true,
+                grid: {
+                    display: false  // Cleaner appearance without grid lines
+                }
+            }
+        },
+        responsive: true,
+        maintainAspectRatio: false,  // Ensures chart scales correctly
+        plugins: {
+            legend: {
+                display: false  // Remove legend if space is tight
+            }
+        }
+    }
+});
+
+
+// Scrolling functionality for hourly forecast
+const scrollLeft = document.getElementById('scrollLeft');
+const scrollRight = document.getElementById('scrollRight');
+const hourlyForecast = document.getElementById('hourlyForecast');
+
+let scrollPosition = 0;
+
+scrollRight.addEventListener('click', () => {
+
+    scrollPosition += 1;
+    updateHourlyView();
+});
+
+scrollLeft.addEventListener('click', () => {
+    scrollPosition -= 1;
+    updateHourlyView();
+});
+
+function updateHourlyView() {
+    const hourlyItems = Array.from(hourlyForecast.querySelectorAll('.hourly-item'));
+    const totalItems = hourlyItems.length;
+    const visibleItems = 6;
+
+    hourlyItems.forEach((item, index) => {
+        item.style.display = index >= scrollPosition && index < scrollPosition + visibleItems ? 'block' : 'none';
+    });
+
+    scrollLeft.disabled = scrollPosition === 0;
+    scrollRight.disabled = scrollPosition + visibleItems >= totalItems;
+}
+
+updateHourlyView();
+</script>

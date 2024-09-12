@@ -1,0 +1,40 @@
+/* Text Container Styles */
+.text-container {
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* General container, row, and column styles */
+.container {
+    background-color: #000000;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.col, .col-6 {
+    padding: 10px;
+    background-color: #4d2c93;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    max-height: 300px;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .col, .col-5 {
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+}

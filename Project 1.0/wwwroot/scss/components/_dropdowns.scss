@@ -1,0 +1,15 @@
+/* Dropdown menu styles */
+.navbar .dropdown-menu {
+    background-color: #6a5acd; /* Matching the navbar background */
+    border: none; /* No border for a cleaner look */
+}
+
+.navbar .dropdown-item {
+    color: #ffffff; /* White text for dropdown items */
+    font-weight: normal; /* Normal weight for dropdown text */
+}
+
+.navbar .dropdown-item:hover, .navbar .dropdown-item:focus {
+    background-color: #5a4aad; /* Slightly darker on hover/focus */
+    color: #ffffff; /* Maintain white text on hover/focus */
+}

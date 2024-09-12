@@ -1,0 +1,44 @@
+/* Base Typography for all text elements */
+body, h1, h2, h3, p, a {
+    font-family: 'Copperplate Gothic', 'Copperplate', Gothic, sans-serif;
+    color: #cccccc; // Ensures all text is light grey unless specified
+    font-weight: bold; // Applies boldness universally
+}
+
+/* Header styles */
+
+h1 {
+    color: #6a5acd; // Specific color for h1
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #6a5acd; // Maintains the same color as h1 for consistency
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #3b00a9; // Different color for h3
+}
+
+/* Paragraph text styles */
+p {
+    font-size: 1.1rem; // Standard size for paragraph text
+}
+
+/* Enhanced typography for centered text */
+.text-center p {
+    font-size: 1.1rem;
+    line-height: 1.6; // Improved readability with increased line height
+}
+
+/* Link styles */
+.text-center a, a {
+    color: #0066cc; // Brighter color for all links
+    text-decoration: none; // No underline by default
+}
+
+.text-center a:hover, a:hover {
+    text-decoration: blink; // Underline on hover for links
+}

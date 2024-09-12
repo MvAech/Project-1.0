@@ -1,0 +1,25 @@
+/* Global AppBar styles */
+.navbar {
+    background-color: #570ebf;
+    font-family: 'Copperplate Gothic', 'Copperplate', Gothic, sans-serif;
+    color: #cccccc; // This makes the initial color light grey, change as needed
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0);
+    font-weight: bold; // Maintains boldness
+    padding: 5px 10px; // Reduced padding
+}
+
+.nav-link, .navbar-brand {
+    color: #ffffff; // Changes color to white for consistency with dropdown
+    font-size: 1rem; // Adjust size if needed
+}
+
+.navbar .nav-link:hover, .navbar .navbar-brand:hover {
+    color: #cccccc; // Lighter grey on hover for visual effect
+}
+
+.navbar-brand img {
+    height: 30px; // Adjusted height for the logo
+    vertical-align: middle; // Keeps the logo vertically aligned
+    margin-right: 1px; // Reduced margin to bring elements closer
+}

@@ -1,11 +1,24 @@
-// imports all styles
+@import 'base/reset';
+@import 'base/typography';
 
-@import 'base/_reset.scss';
-@import 'layouts/_grid.scss';
-@import 'layouts/_home.scss';
-@import 'components/_buttons.scss';
-@import 'components/_container.scss';
-@import 'pages/_home.scss';
-@import 'utilities/_helpers.scss';
-@import 'themes/_theme.scss';
-@import '_mixins.scss';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/dropdowns';
+@import 'components/forms';
+@import 'components/navbar';
+
+@import 'layouts/footer';
+@import 'layouts/grid';
+@import 'layouts/header';
+
+@import 'pages/about';
+@import 'pages/contact';
+@import 'pages/home';
+@import 'pages/news';
+
+@import 'themes/dark';
+@import 'themes/light';
+
+@import 'utilities/spacing';
+@import 'utilities/visibility';
+@import 'mixins';

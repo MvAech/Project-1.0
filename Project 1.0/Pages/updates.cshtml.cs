@@ -14,9 +14,11 @@ namespace Project_1._0.Pages
             // Initialization of RecentUpdates list
             RecentUpdates = new List<Update>()
             {
-                new Update { Date = DateTime.Now, Description = "Added new privacy policy details." },
-                new Update { Date = DateTime.Now.AddDays(-1), Description = "Updated the homepage layout." },
-                new Update { Date = DateTime.Now.AddDays(-1), Description = "Added Site Logo To Appbar as well as icons to Menu Navigation"}
+                new Update { Date = new DateTime(2024, 7, 28), Description = "Added new privacy policy details." },
+                new Update { Date = new DateTime(2024, 7, 28), Description = "Updated the homepage layout." },
+                new Update { Date = new DateTime(2024, 7, 30), Description = "Added Site Logo To Appbar as well as icons to Menu Navigation"},
+                new Update { Date = new DateTime(2024, 8, 6), Description = "Integrated live weather updates on the news page."},
+                new Update { Date = new DateTime(2024, 8, 7), Description = "Completed integration of Font Awesome for enhanced iconography."},
             };
         }
     }
@@ -24,6 +26,6 @@ namespace Project_1._0.Pages
     public class Update
     {
         public DateTime Date { get; set; }
-        public string Description { get; set; }
+        public string? Description { get; set; }
     }
 }

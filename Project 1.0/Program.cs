@@ -1,7 +1,12 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Project_1._0.Services; // Make sure this using directive is correct based on your namespace
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddHttpClient<WeatherService>();  // Correctly register WeatherService with HttpClient
 
 var app = builder.Build();
 

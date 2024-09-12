@@ -1,0 +1,166 @@
+/* Styles for the forecast section */
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+.forecast-card {
+    background-color: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px; /* Slightly wider to accommodate new layout */
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between;
+    flex-grow: 1;
+}
+@media (max-width: 1024px) {
+    .forecast-card {
+        width: 45%; /* Adjust the width for smaller screens */
+        height: auto; /* Allow the height to adjust */
+    }
+}
+
+@media (max-width: 768px) {
+    .forecast-card {
+        width: 1000%; /* Stack cards vertically on very small screens */
+        height: auto;
+    }
+}
+
+.forecast-card img {
+    width: 40px;
+    height: 40px;
+}
+
+.forecast-card .temp-container {
+    text-align: center;
+    margin-left: 10px; /* Space between icon and temperature */
+}
+
+.forecast-card .temp-container p {
+    margin: 0;
+}
+
+.forecast-card .details-container {
+    text-align: right;
+    margin-left: auto;
+}
+
+.forecast-card .details-container p {
+    margin: 2px 0;
+}
+
+.weather-tabs {
+    .tab-list {
+        display: flex;
+        justify-content: space-around;
+        background-color: #2a2a2a;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom:5px;
+        border-radius: 5px;
+
+        .tab-item {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: white;
+            background-color: #1a1a1a;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+
+            &.active {
+                background-color: #4a4a4a;
+                font-weight: bold;
+            }
+
+            &:hover {
+                background-color: #3a3a3a;
+            }
+        }
+    }
+
+    .tab-content {
+        margin-top: 2px;
+
+        .tab-pane {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+
+/* Styles for the summary chart */
+.summary-chart {
+    position: relative;
+    height: 400px; /* Increased the height slightly for better visibility */
+    width: 100%; /* Ensure it takes the full width of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 400px; /* Limiting the height of the canvas */
+    display: block; /* Ensure it's displayed as a block element */
+}
+
+.hourly-forecast-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.hourly-forecast-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.hourly-forecast {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 600px;
+}
+
+.hourly-items {
+    display: flex;
+}
+
+.hourly-item {
+    flex: 0 0 auto;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.scroll-btn {
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.scroll-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+

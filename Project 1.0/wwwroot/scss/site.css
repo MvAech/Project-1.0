@@ -1,137 +1,291 @@
-﻿/* Existing styles... */
-
-/* Global body styles */
-body {
-    margin: 20px;
-    font-family: 'Copperplate Gothic', 'Copperplate', Gothic, sans-serif;
-    background-color: #000;
-    color: #cccccc;
-    font-weight: bold;
-}
-
-/* Global HTML settings */
-html {
-    font-size: 14px;
-    position: relative;
-    min-height: 100%;
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-/* Global AppBar styles */
-.navbar {
-    background-color: #570ebf;
-    font-family: 'Copperplate Gothic', 'Copperplate', Gothic, sans-serif;
-    color: #000000;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    font-weight: bold; /* Makes text bold */
-}
-
-.nav-link, .navbar-brand {
-    color: gray; /* Ensuring all navigation links are white */
-}
-
-.navbar .nav-link:hover, .navbar .navbar-brand:hover {
-    color: #cccccc; /* Lighter grey on hover for visual effect */
-}
-
-.navbar-brand img {
-    height: 40px; /* Controls the size of the logo */
-    vertical-align: middle; /* Aligns the logo vertically in the middle of the navbar */
-    margin-right: 10px; /* Optional: adds spacing on the right of the logo */
-}
-
-/* Focus styles for various elements */
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem gray, 0 0 0 0.25rem #258cfb;
+﻿/* Base Typography for all text elements */
+body, h1, h2, h3, p, a {
+  font-family: "Copperplate Gothic", "Copperplate", Gothic, sans-serif;
+  color: #cccccc;
+  font-weight: bold;
 }
 
 /* Header styles */
 h1 {
-    color: #6a5acd;
+  color: #6a5acd;
+  font-size: 2rem;
 }
 
 h2 {
-    color: #6a5acd;
+  font-size: 1.8rem;
+  color: #6a5acd;
 }
 
 h3 {
-    color: #3b00a9;
+  font-size: 1.5rem;
+  color: #3b00a9;
 }
 
 /* Paragraph text styles */
 p {
-    font-size: 16px;
-    color: #cccccc;
+  font-size: 1.1rem;
 }
 
-/* Enhanced typography and readability for text-center class */
+/* Enhanced typography for centered text */
 .text-center p {
-    font-size: 1.1rem; /* Slightly larger text for better readability */
-    line-height: 1.6; /* Increased line height for better text flow */
-    color: #cccccc; /* Darker text for better contrast */
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
-.text-center a {
-    color: #0066cc; /* Brighter color for links */
-    text-decoration: none; /* No underline by default */
+/* Link styles */
+.text-center a, a {
+  color: #0066cc;
+  text-decoration: none;
 }
 
-    .text-center a:hover {
-        text-decoration: underline; /* Underline on hover for links */
-    }
+.text-center a:hover, a:hover {
+  text-decoration: blink;
+}
 
 /* Dropdown menu styles */
 .navbar .dropdown-menu {
-    background-color: #6a5acd; /* Matching the navbar background */
-    border: none; /* No border for a cleaner look */
+  background-color: #6a5acd; /* Matching the navbar background */
+  border: none; /* No border for a cleaner look */
 }
 
 .navbar .dropdown-item {
-    color: #ffffff; /* White text for dropdown items */
-    font-weight: normal; /* Normal weight for dropdown text */
+  color: #ffffff; /* White text for dropdown items */
+  font-weight: normal; /* Normal weight for dropdown text */
 }
 
-    .navbar .dropdown-item:hover, .navbar .dropdown-item:focus {
-        background-color: #5a4aad; /* Slightly darker on hover/focus */
-        color: #ffffff; /* Maintain white text on hover/focus */
-    }
+.navbar .dropdown-item:hover, .navbar .dropdown-item:focus {
+  background-color: #5a4aad; /* Slightly darker on hover/focus */
+  color: #ffffff; /* Maintain white text on hover/focus */
+}
+
+/* Focus styles for various elements */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem gray, 0 0 0 0.25rem #258cfb;
+}
+
+/* Global AppBar styles */
+.navbar {
+  background-color: #570ebf;
+  font-family: "Copperplate Gothic", "Copperplate", Gothic, sans-serif;
+  color: #cccccc;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.nav-link, .navbar-brand {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.navbar .nav-link:hover, .navbar .navbar-brand:hover {
+  color: #cccccc;
+}
+
+.navbar-brand img {
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 1px;
+}
 
 /* Text Container Styles */
 .text-container {
-    padding: 20px;
-    margin-bottom: 20px;
-    color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #fff;
 }
-    .row {
-    display: flex;
-    justify-content: space-around;
+
+/* General container, row, and column styles */
+.container {
+  background-color: #000000;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
 }
 
 .col, .col-6 {
-    padding: 10px;
-    background-color: #331671;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    overflow-y: auto;
-    max-height: 300px;
-    
-    &:not(:last-child) {
-        margin-right: 20px;
+  padding: 10px;
+  background-color: #4d2c93;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+  max-height: 300px;
 }
-
+.col:not(:last-child), .col-6:not(:last-child) {
+  margin-right: 20px;
 }
 
 @media (max-width: 768px) {
-    .col, .col-5 {
-        flex: 0 0 100%;
-        margin-bottom: 10px;
-    }
+  .col, .col-5 {
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+  }
 }
+/* Styles for the forecast section */
+.forecast-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 5px;
+}
+
+.forecast-card {
+  background-color: #1a1a1a;
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px; /* Slightly wider to accommodate new layout */
+  height: 100px;
+  color: white;
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+@media (max-width: 1024px) {
+  .forecast-card {
+    width: 45%; /* Adjust the width for smaller screens */
+    height: auto; /* Allow the height to adjust */
+  }
+}
+@media (max-width: 768px) {
+  .forecast-card {
+    width: 1000%; /* Stack cards vertically on very small screens */
+    height: auto;
+  }
+}
+.forecast-card img {
+  width: 40px;
+  height: 40px;
+}
+
+.forecast-card .temp-container {
+  text-align: center;
+  margin-left: 10px; /* Space between icon and temperature */
+}
+
+.forecast-card .temp-container p {
+  margin: 0;
+}
+
+.forecast-card .details-container {
+  text-align: right;
+  margin-left: auto;
+}
+
+.forecast-card .details-container p {
+  margin: 2px 0;
+}
+
+.weather-tabs .tab-list {
+  display: flex;
+  justify-content: space-around;
+  background-color: #2a2a2a;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.weather-tabs .tab-list .tab-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.weather-tabs .tab-list .tab-item.active {
+  background-color: #4a4a4a;
+  font-weight: bold;
+}
+.weather-tabs .tab-list .tab-item:hover {
+  background-color: #3a3a3a;
+}
+.weather-tabs .tab-content {
+  margin-top: 2px;
+}
+.weather-tabs .tab-content .tab-pane {
+  display: none;
+}
+.weather-tabs .tab-content .tab-pane.active {
+  display: block;
+}
+
+/* Styles for the summary chart */
+.summary-chart {
+  position: relative;
+  height: 400px; /* Increased the height slightly for better visibility */
+  width: 100%; /* Ensure it takes the full width of the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 400px; /* Limiting the height of the canvas */
+  display: block; /* Ensure it's displayed as a block element */
+}
+
+.hourly-forecast-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.hourly-forecast-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.hourly-forecast {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  max-width: 600px;
+}
+
+.hourly-items {
+  display: flex;
+}
+
+.hourly-item {
+  flex: 0 0 auto;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.scroll-btn {
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.scroll-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+body {
+  background-color: #000;
+  color: #cccccc;
 }
