@@ -4,24 +4,31 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
+
 namespace Project_1._0.Services
 {
     public class WeatherService
     {
-        private HttpClient _httpClient;
-        private const string BaseUrl = "http://api.weatherapi.com/v1";
-        private const string ApiKey = "cd3a20dd98ba472ea8105844240808";
+        private readonly HttpClient _httpClient;
+        private readonly string _baseUrl;
+        private readonly string _apiKey;
 
-        public WeatherService(HttpClient httpClient)
+        public WeatherService(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
+
+            // Retrieve the BaseUrl and ApiKey from appsettings.json using IConfiguration
+            _baseUrl = configuration["WeatherApi:BaseUrl"]
+                ?? throw new InvalidOperationException("Base URL is missing in configuration.");
+            _apiKey = configuration["WeatherApi:ApiKey"]
+                ?? throw new InvalidOperationException("API key is missing in configuration.");
         }
 
         public async Task<WeatherData?> GetCurrentWeatherAsync(string city)
         {
             try
             {
-                var url = $"{BaseUrl}/current.json?key={ApiKey}&q={city}&aqi=yes";
+                var url = $"{_baseUrl}/current.json?key={_apiKey}&q={city}&aqi=yes";
                 var responseString = await _httpClient.GetStringAsync(url);
                 dynamic weatherJson = JsonConvert.DeserializeObject(responseString) ?? throw new InvalidOperationException("Failed to deserialize the JSON response.");
 
@@ -54,7 +61,7 @@ namespace Project_1._0.Services
         {
             try
             {
-                var url = $"{BaseUrl}/forecast.json?key={ApiKey}&q={city}&days={days}&aqi=no&alerts=no";
+                var url = $"{_baseUrl}/forecast.json?key={_apiKey}&q={city}&days={days}&aqi=no&alerts=no";
                 var responseString = await _httpClient.GetStringAsync(url);
                 dynamic forecastJson = JsonConvert.DeserializeObject(responseString) ?? throw new InvalidOperationException("Failed to deserialize the JSON response.");
 

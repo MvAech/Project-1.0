@@ -7,6 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddHttpClient<WeatherService>();  // Correctly register WeatherService with HttpClient
+builder.Services.AddHttpClient();
+builder.Services.AddRazorPages();
+builder.Services.AddHttpClient<WeatherService>();
+builder.Services.Configure<WeatherService>(builder.Configuration.GetSection("WeatherApi"));
+
+
 
 var app = builder.Build();
 
